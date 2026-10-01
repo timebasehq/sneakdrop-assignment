@@ -1,39 +1,27 @@
-# Dependencies
+# Node dependencies
 node_modules/
-vendor/
-.venv/
-venv/
-__pycache__/
-*.pyc
+**/node_modules/
 
-# Build output
-dist/
-build/
-out/
-.next/
-target/
-bin/
-obj/
-
-# Environment and secrets
-.env
-.env.*
+# Environment variables
+**/.env
+**/.env.*
+**/.env.local
+!**/.env.example
 !.env.example
 
-# Databases and local data
-*.db
-*.sqlite
-*.sqlite3
-
-# Logs
+# Logs & cache
 *.log
 logs/
+.turbo/
+.cache/
 
-# OS files
+# Build outputs
+dist/
+build/
+.next/
+
+# OS/Editor files
 .DS_Store
 Thumbs.db
-
-# Editor files
 .vscode/
 .idea/
-*.swp
