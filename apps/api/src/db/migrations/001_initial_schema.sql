@@ -1,0 +1,2 @@
+-- Initial Schema Migration
+-- Applied automatically by src/db/client.ts

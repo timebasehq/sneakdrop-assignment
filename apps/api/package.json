@@ -1,0 +1,30 @@
+{
+  "name": "@sneakdrop/api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/src/server.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/src/server.js",
+    "dev": "npm run build --workspace=@sneakdrop/shared && tsc && node dist/src/server.js",
+    "seed": "tsc && node dist/scripts/seed.js",
+    "simulate:payments": "tsc && node dist/scripts/simulate-payment.js",
+    "test": "tsc && node --test dist/tests/**/*.test.js",
+    "test:unit": "tsc && node --test dist/tests/unit/*.test.js",
+    "test:integration": "tsc && node --test dist/tests/integration/*.test.js",
+    "test:concurrency": "tsc && node --test dist/tests/concurrency/*.test.js"
+  },
+  "dependencies": {
+    "@sneakdrop/shared": "*",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.7",
+    "typescript": "^5.4.5"
+  }
+}
